@@ -31,7 +31,7 @@ function comments(state = initialState, action) {
 			});
 			
 		case REMOVE_COMMENT:
-			return state.comments.filter(comment => comment.id !== action.id);
+			return state.filter(comment => comment.id !== action.id);
 		
 		case THUMB_UP_COMMENT:
 			return state.map(comment => {
